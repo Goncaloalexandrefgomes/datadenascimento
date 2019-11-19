@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         {
             get
             {
-                return data.ToString("dddddd");
+                return "O dia da semana que voce nasceu foi " + data.ToString("dddd") + " .";
             }
         }
     }
