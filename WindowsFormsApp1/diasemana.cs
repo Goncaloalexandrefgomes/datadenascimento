@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
         {
             get
             {
-                return data.ToString("ddddd");
+                return data.ToString("dddddd");
             }
         }
     }
