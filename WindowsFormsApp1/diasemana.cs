@@ -11,6 +11,7 @@ namespace WindowsFormsApp1
     {
         private DateTime data;
 
+
         public string receber
         {
             set
@@ -21,9 +22,23 @@ namespace WindowsFormsApp1
 
         public string envia
         {
-            get
+            get 
             {
-                return "O dia da semana que voce nasceu foi " + data.ToString("dddd") + " .";
+                DateTime hoje = DateTime.Now;
+                int anos = hoje.Year - data.Year;
+                int meses = hoje.Month - data.Month;
+                int dias = hoje.Day - data.Day;
+                if (meses < 0)
+                {
+                    anos--;
+                    dias += 30;
+                }
+                string frase = "A sua idade é ";
+                frase += anos.ToString() + " anos e ";
+                frase += meses.ToString() + " meses e ";
+                frase += dias.ToString() + " dias.";
+
+                return frase;
             }
         }
     }
